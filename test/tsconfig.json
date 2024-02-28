@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "module": "Node16",
+    "baseUrl": ".",
+    "noEmit": false
+  },
+  "include": ["../src/**/*.ts", "**/*.ts"]
+}
