@@ -1,7 +1,7 @@
 import { test, expect } from 'vitest'
 import { app } from '../helper.js'
 
-test('example is loaded', async (t) => {
+test('example is loaded', async () => {
   const res = await app.inject({
     url: '/example'
   })

@@ -1,7 +1,7 @@
 import { test, expect } from 'vitest'
 import { app } from '../helper.js'
 
-test('default root route', async (t) => {
+test('default root route', async () => {
   const res = await app.inject({
     url: '/'
   })

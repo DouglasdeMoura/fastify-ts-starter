@@ -1,10 +1,11 @@
 import fp from 'fastify-plugin'
 
+// biome-ignore lint/complexity/noBannedTypes: This is just an example
 export type SupportPluginOptions = {}
 
 // The use of fastify-plugin is required to be able
 // to export the decorators to the outer scope
-export default fp<SupportPluginOptions>(async (fastify, opts) => {
+export default fp<SupportPluginOptions>(async (fastify) => {
   fastify.decorate('someSupport', () => 'hugs')
 })
 
