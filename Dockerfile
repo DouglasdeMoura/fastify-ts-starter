@@ -1,35 +1,27 @@
-FROM node:20-bookworm-slim AS base
+ARG NODE_VERSION=20
 
-FROM base AS productiondeps
+FROM node:${NODE_VERSION}-bookworm-slim AS base
 
 WORKDIR /app
+
+FROM base AS dependencies
 
 COPY package.json package-lock.json* ./
 RUN npm ci --include=prod
 
-FROM base AS developmentdeps
-
-WORKDIR /app
-
-COPY --from=productiondeps /app/package*.json ./
-RUN npm ci --include=dev
-
 FROM base AS builder
 
-WORKDIR /app
-
-COPY --from=productiondeps /app/node_modules ./node_modules
-COPY --from=developmentdeps /app/node_modules ./node_modules
+COPY --from=dependencies /app/node_modules ./node_modules
 COPY . .
 RUN npm run build
 
-FROM gcr.io/distroless/nodejs20-debian12 AS release
+FROM gcr.io/distroless/nodejs${NODE_VERSION}-debian12 AS release
 
 WORKDIR /app
 
 COPY --from=builder /app/dist .
-COPY --from=productiondeps /app/package*.json ./
-COPY --from=productiondeps /app/node_modules ./node_modules
+COPY --from=dependencies /app/package*.json ./
+COPY --from=dependencies /app/node_modules ./node_modules
 
 ARG PORT
 
