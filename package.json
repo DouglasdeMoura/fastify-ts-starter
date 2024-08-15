@@ -9,10 +9,10 @@
   },
   "scripts": {
     "test": "vitest",
-    "start": "npm run build && node dist/server.js",
+    "start": "npm run build && node dist/index.js",
     "build": "tsc && tsc-alias",
     "typecheck": "tsc --noEmit",
-    "dev": "cross-env FASTIFY_AUTOLOAD_TYPESCRIPT=1 node --import=tsx --watch --env-file=.env ./src/server.ts",
+    "dev": "cross-env FASTIFY_AUTOLOAD_TYPESCRIPT=1 node --import=tsx --watch --env-file=.env ./src/index.ts",
     "check": "biome check --apply ./src",
     "check:unsafe": "biome check --apply-unsafe ./src"
   },

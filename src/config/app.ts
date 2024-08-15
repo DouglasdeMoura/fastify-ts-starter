@@ -25,7 +25,7 @@ const app: FastifyPluginAsync<AppOptions> = async (
   // those should be support plugins that are reused
   // through your application
   fastify.register(AutoLoad, {
-    dir: path.join(__dirname, 'config/plugins'),
+    dir: path.join(__dirname, 'plugins'),
     options: opts,
     forceESM: true,
   })
@@ -33,7 +33,7 @@ const app: FastifyPluginAsync<AppOptions> = async (
   // This loads all plugins defined in routes
   // define your routes in one of these
   fastify.register(AutoLoad, {
-    dir: path.join(__dirname, 'routes'),
+    dir: path.join(__dirname, '../routes'),
     options: opts,
     forceESM: true,
   })
