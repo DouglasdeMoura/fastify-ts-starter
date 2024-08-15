@@ -27,8 +27,8 @@ FROM gcr.io/distroless/nodejs20-debian12 AS release
 
 WORKDIR /app
 
-COPY package.json package-lock.json* ./
 COPY --from=builder /app/dist .
+COPY --from=productiondeps /app/package*.json ./
 COPY --from=productiondeps /app/node_modules ./node_modules
 
 ARG PORT
