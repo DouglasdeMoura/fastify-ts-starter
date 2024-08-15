@@ -3,7 +3,7 @@
   "name": "fastify-starter",
   "description": "This project was bootstrapped with Fastify-CLI.",
   "version": "2024.8.3",
-  "main": "app.ts",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -29,6 +29,7 @@
     "fastify": "^4.28.1",
     "fastify-plugin": "^4.5.1",
     "fastify-type-provider-zod": "^2.0.0",
+    "pino": "^9.3.2",
     "zod": "^3.23.3"
   },
   "devDependencies": {

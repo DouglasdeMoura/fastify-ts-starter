@@ -30,7 +30,7 @@ app.addHook('onClose', async (_instance, done) => {
   done()
 })
 
-app.listen({ port: env.PORT }, (err) => {
+app.listen({ port: env.PORT, host: '0.0.0.0' }, (err) => {
   if (err) {
     app.log.error(err)
     process.exit(1)
