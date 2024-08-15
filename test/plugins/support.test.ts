@@ -1,6 +1,6 @@
 import { test, expect } from 'vitest'
 import Fastify from 'fastify'
-import Support from '../../src/plugins/support.js'
+import Support from '../../src/config/plugins/support.js'
 
 test('support works standalone', async () => {
   const fastify = Fastify()
