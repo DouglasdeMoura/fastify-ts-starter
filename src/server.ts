@@ -1,6 +1,6 @@
 import closeWithGrace from 'close-with-grace'
 import Fastify from 'fastify'
-import appService from '~/app.js'
+import appService from '~/config/app.js'
 import { env } from '~/config/environment.js'
 
 const app = Fastify({
