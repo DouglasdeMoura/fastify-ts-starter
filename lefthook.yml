@@ -14,7 +14,7 @@ pre-commit:
   commands:
     biome:
       glob: "*.{js,ts,jsx,tsx,json}"
-      run: biome check --apply --staged
+      run: npx biome check --write --staged {staged_files}
     test:
       glob: "*.{js,ts,jsx,tsx}"
-      run: vitest related --run
+      run: npx vitest related {staged_files}

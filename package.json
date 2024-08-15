@@ -13,8 +13,8 @@
     "build": "tsc && tsc-alias",
     "typecheck": "tsc --noEmit",
     "dev": "cross-env FASTIFY_AUTOLOAD_TYPESCRIPT=1 node --import=tsx --watch --env-file=.env ./src/index.ts",
-    "check": "biome check --apply ./src",
-    "check:unsafe": "biome check --apply-unsafe ./src",
+    "check": "biome check --write ./src",
+    "check:unsafe": "biome check --write-unsafe ./src",
     "release": "release-it"
   },
   "keywords": [],
