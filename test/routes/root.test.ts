@@ -3,7 +3,7 @@ import { app } from '../helper.js'
 
 test('default root route', async () => {
   const res = await app.inject({
-    url: '/'
+    url: '/',
   })
-  expect(JSON.parse(res.payload)).toEqual({ root: true })
+  expect(res.json()).toEqual({ root: true })
 })
