@@ -1,19 +1,20 @@
 ARG NODE_VERSION=20
 
 FROM node:${NODE_VERSION}-bookworm-slim AS base
+LABEL maintainer="Douglas Moura <douglas.ademoura@gmail.com>"
 
 WORKDIR /app
 
 FROM base AS dependencies
 
 COPY package.json package-lock.json* ./
-RUN npm ci --include=prod
+RUN npm ci --omit=dev
 
 FROM base AS builder
 
-COPY --from=dependencies /app/node_modules ./node_modules
+COPY --from=dependencies /app/package*.json /app/package-lock.json* ./
 COPY . .
-RUN npm run build
+RUN npm ci --include=dev && npm run build
 
 FROM gcr.io/distroless/nodejs${NODE_VERSION}-debian12 AS release
 
