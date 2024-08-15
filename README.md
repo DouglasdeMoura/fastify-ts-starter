@@ -1,4 +1,5 @@
 # Getting Started with [Fastify-CLI](https://www.npmjs.com/package/fastify-cli)
+
 This project was bootstrapped with Fastify-CLI.
 
 ## Available Scripts
@@ -17,6 +18,16 @@ For production mode
 ### `npm run test`
 
 Run the test cases.
+
+## Git Hooks
+
+This project uses [LeftHook](https://github.com/evilmartians/lefthook/) to manage git hooks.
+
+After cloning the project, run the following command to install the git hooks:
+
+```bash
+npx lefthook install
+```
 
 ## Learn More
 
