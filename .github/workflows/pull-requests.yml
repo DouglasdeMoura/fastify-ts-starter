@@ -12,6 +12,13 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Run hadolint
+        shell: bash
+        continue-on-error: true
+        run: |
+          docker pull hadolint/hadolint
+          docker run --rm -i hadolint/hadolint < Dockerfile
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -19,10 +26,6 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-
-      # - name: Validate current commit (last commit) with commitlint
-      #   if: github.event_name == 'push'
-      #   run: npx commitlint --last --verbose
 
       - name: Validate PR commits with commitlint
         if: github.event_name == 'pull_request'
