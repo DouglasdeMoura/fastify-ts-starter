@@ -2,7 +2,7 @@
   "type": "module",
   "name": "fastify-starter",
   "description": "This project was bootstrapped with Fastify-CLI.",
-  "version": "1.0.0",
+  "version": "2024.8.0",
   "main": "app.ts",
   "directories": {
     "test": "test"
