@@ -1,0 +1,21 @@
+{
+  "git": {
+    "requireBranch": "main",
+    "commitMessage": "ci: release v${version}"
+  },
+  "github": {
+    "release": true
+  },
+  "hooks": {
+    "before:init": ["npm run test", "npm run build"]
+  },
+  "npm": {
+    "publish": false
+  },
+  "plugins": {
+    "@csmith/release-it-calver-plugin": {
+      "format": "yyyy.mm.minor",
+      "increment": "calendar"
+    }
+  }
+}
