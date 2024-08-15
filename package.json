@@ -19,7 +19,7 @@
   },
   "keywords": [],
   "author": "Douglas Moura <douglas.ademoura@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@fastify/autoload": "^5.8.1",
     "@fastify/sensible": "^5.6.0",
