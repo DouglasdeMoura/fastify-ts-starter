@@ -38,6 +38,7 @@
     "@types/node": "^20.12.8",
     "cross-env": "^7.0.3",
     "fastify-tsconfig": "^2.0.0",
+    "lefthook": "^1.7.12",
     "pino-pretty": "^11.2.2",
     "release-it": "^17.6.0",
     "tsc-alias": "^1.8.10",

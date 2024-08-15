@@ -1,0 +1,20 @@
+# EXAMPLE USAGE:
+#
+#   Refer for explanation to following link:
+#   https://github.com/evilmartians/lefthook/blob/master/docs/configuration.md
+
+pre-push:
+  commands:
+    packages-audit:
+      tags: frontend security
+      run: npm audit
+
+pre-commit:
+  parallel: true
+  commands:
+    biome:
+      glob: "*.{js,ts,jsx,tsx,json}"
+      run: biome check --apply --staged
+    test:
+      glob: "*.{js,ts,jsx,tsx}"
+      run: vitest related --run
