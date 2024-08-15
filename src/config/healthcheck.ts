@@ -3,21 +3,23 @@ import { pino } from 'pino'
 
 const logger = pino()
 
-const options = {
-  host: 'localhost',
-  port: process.env.PORT || 3000,
-  timeout: 2000,
-}
+const request = http.request(
+  {
+    host: 'localhost',
+    port: process.env.PORT || 3000,
+    timeout: 2000,
+    pathname: '/ping',
+  },
+  (res) => {
+    logger.info(`Healthcheck status code: ${res.statusCode}`)
 
-const request = http.request(options, (res) => {
-  logger.info(`Healthcheck status code: ${res.statusCode}`)
+    if (res.statusCode === 200) {
+      process.exit(0)
+    }
 
-  if (res.statusCode === 200) {
-    process.exit(0)
-  }
-
-  process.exit(1)
-})
+    process.exit(1)
+  },
+)
 
 request.on('error', (err) => {
   logger.error(err)
