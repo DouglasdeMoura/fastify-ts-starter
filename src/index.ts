@@ -16,10 +16,13 @@ app.register(appService)
 // delay is the number of milliseconds for the graceful close to finish
 const closeListeners = closeWithGrace(
   { delay: env.FASTIFY_CLOSE_GRACE_DELAY },
-  async ({ err }) => {
+  async ({ signal, err }) => {
     if (err) {
-      app.log.error(err)
+      app.log.error({ err }, 'server closing due to error')
+    } else {
+      app.log.info(`${signal} received, server closing`)
     }
+
     await app.close()
   },
 )
