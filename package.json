@@ -42,7 +42,7 @@
     "pino-pretty": "^11.2.2",
     "release-it": "^17.6.0",
     "tsc-alias": "^1.8.10",
-    "tsx": "^4.18.0",
+    "tsx": "^4.19.0",
     "typescript": "^5.4.5",
     "vitest": "^1.6.0"
   }
