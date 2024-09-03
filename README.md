@@ -1,6 +1,12 @@
 # Getting Started with [Fastify-CLI](https://www.npmjs.com/package/fastify-cli)
 
-This project was bootstrapped with Fastify-CLI.
+This project was bootstrapped with Fastify-CLI. Use this template to start your Fastify project.
+
+```bash
+npx degit DouglasdeMoura/fastify-ts-starter my-fastify-app
+cd my-fastify-app
+npm install
+```
 
 ## Available Scripts
 
