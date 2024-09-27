@@ -22,7 +22,7 @@
   "license": "MIT",
   "dependencies": {
     "@fastify/autoload": "^6.0.0",
-    "@fastify/sensible": "^6.0.0",
+    "@fastify/sensible": "^6.0.1",
     "@fastify/swagger": "^9.1.0",
     "@scalar/fastify-api-reference": "^1.25.11",
     "close-with-grace": "^2.1.0",
