@@ -1,4 +1,4 @@
-import sensible, { type SensibleOptions } from '@fastify/sensible'
+import sensible, { type FastifySensibleOptions } from '@fastify/sensible'
 import fp from 'fastify-plugin'
 
 /**
@@ -6,6 +6,6 @@ import fp from 'fastify-plugin'
  *
  * @see https://github.com/fastify/fastify-sensible
  */
-export default fp<SensibleOptions>(async (fastify) => {
+export default fp<FastifySensibleOptions>(async (fastify) => {
   fastify.register(sensible)
 })
