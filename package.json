@@ -41,7 +41,7 @@
     "cross-env": "^7.0.3",
     "fastify-tsconfig": "^2.0.0",
     "lefthook": "^1.7.18",
-    "pino-pretty": "^11.2.2",
+    "pino-pretty": "^11.3.0",
     "release-it": "^17.9.0",
     "tsc-alias": "^1.8.10",
     "tsx": "^4.19.1",
