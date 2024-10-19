@@ -11,6 +11,7 @@ This is a Fastify starter project for your new projects. Out-of-the-box, it incl
 - [Biome](https://biomejs.dev) for code formatting and linting;
 - [Commitlint](https://commitlint.js.org/) for commit message linting;
 - [Lefthook](https://github.com/evilmartians/lefthook) for git hooks;
+- [Wireit](https://github.com/google/wireit) to make npm/pnpm/yarn scripts smarter and more efficient;
 - [Docker](https://www.docker.com/) for containerization;
 - [Docker Compose](https://docs.docker.com/compose/) for running the app in a container;
 - [Release It!](https://www.npmjs.com/package/release-it) to automate versioning and package publishing-related tasks (by default, the versioning is done following [CalVer](https://calver.org/) format).

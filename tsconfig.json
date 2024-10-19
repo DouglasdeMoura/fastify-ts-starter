@@ -8,11 +8,10 @@
     "moduleDetection": "force",
     "isolatedModules": true,
     "verbatimModuleSyntax": true,
+    "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": [
-        "src/*"
-      ]
+      "~/*": ["src/*"]
     },
     "strict": true,
     "noUncheckedIndexedAccess": true,
@@ -20,11 +19,7 @@
     "module": "NodeNext",
     "outDir": "dist",
     "sourceMap": true,
-    "lib": [
-      "es2022"
-    ],
+    "lib": ["es2022"]
   },
-  "include": [
-    "src/**/*.ts"
-  ]
+  "include": ["src/**/*.ts"]
 }
