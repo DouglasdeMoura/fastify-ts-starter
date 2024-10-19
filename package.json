@@ -2,7 +2,7 @@
   "type": "module",
   "name": "fastify-starter",
   "description": "This project was bootstrapped with Fastify-CLI.",
-  "version": "2024.10.6",
+  "version": "2024.10.7",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -21,14 +21,26 @@
     "start": {
       "command": "npm run build && node dist/index.js",
       "clean": "if-file-deleted",
-      "files": ["src/**/*.ts", "tsconfig.json"],
-      "output": ["dist/**", ".tsbuildinfo"]
+      "files": [
+        "src/**/*.ts",
+        "tsconfig.json"
+      ],
+      "output": [
+        "dist/**",
+        ".tsbuildinfo"
+      ]
     },
     "build": {
       "command": "tsc --build --pretty && tsc-alias",
       "clean": "if-file-deleted",
-      "files": ["src/**/*.ts", "tsconfig.json"],
-      "output": ["dist/**", ".tsbuildinfo"]
+      "files": [
+        "src/**/*.ts",
+        "tsconfig.json"
+      ],
+      "output": [
+        "dist/**",
+        ".tsbuildinfo"
+      ]
     },
     "typecheck": {
       "command": "tsc --noEmit"
