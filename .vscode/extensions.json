@@ -1,3 +1,7 @@
 {
-  "recommendations": ["biomejs.biome", "ms-azuretools.vscode-docker"]
+  "recommendations": [
+    "biomejs.biome",
+    "ms-azuretools.vscode-docker",
+    "Google.wireit"
+  ]
 }

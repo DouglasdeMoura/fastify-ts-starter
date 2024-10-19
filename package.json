@@ -9,13 +9,30 @@
   },
   "scripts": {
     "test": "vitest",
-    "start": "npm run build && node dist/index.js",
-    "build": "tsc && tsc-alias",
-    "typecheck": "tsc --noEmit",
+    "start": "wireit",
+    "build": "wireit",
+    "typecheck": "wireit",
     "dev": "cross-env FASTIFY_AUTOLOAD_TYPESCRIPT=1 node --import=tsx --watch --env-file=.env ./src/index.ts",
     "check": "biome check --write ./src",
     "check:unsafe": "biome check --write-unsafe ./src",
     "release": "release-it"
+  },
+  "wireit": {
+    "start": {
+      "command": "npm run build && node dist/index.js",
+      "clean": "if-file-deleted",
+      "files": ["src/**/*.ts", "tsconfig.json"],
+      "output": ["dist/**", ".tsbuildinfo"]
+    },
+    "build": {
+      "command": "tsc --build --pretty && tsc-alias",
+      "clean": "if-file-deleted",
+      "files": ["src/**/*.ts", "tsconfig.json"],
+      "output": ["dist/**", ".tsbuildinfo"]
+    },
+    "typecheck": {
+      "command": "tsc --noEmit"
+    }
   },
   "keywords": [],
   "author": "Douglas Moura <douglas.ademoura@gmail.com>",
@@ -46,6 +63,7 @@
     "tsc-alias": "^1.8.10",
     "tsx": "^4.19.1",
     "typescript": "^5.6.3",
-    "vitest": "^2.1.3"
+    "vitest": "^2.1.3",
+    "wireit": "^0.14.9"
   }
 }
