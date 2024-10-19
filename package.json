@@ -2,7 +2,7 @@
   "type": "module",
   "name": "fastify-starter",
   "description": "This project was bootstrapped with Fastify-CLI.",
-  "version": "2024.10.5",
+  "version": "2024.10.6",
   "main": "index.js",
   "directories": {
     "test": "test"
