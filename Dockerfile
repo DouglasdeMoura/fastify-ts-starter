@@ -1,4 +1,4 @@
-ARG NODE_VERSION=20
+ARG NODE_VERSION=22
 
 FROM node:${NODE_VERSION}-bookworm-slim AS base
 LABEL maintainer="Douglas Moura <douglas.ademoura@gmail.com>"
