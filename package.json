@@ -52,7 +52,7 @@
   "dependencies": {
     "@fastify/autoload": "^6.0.2",
     "@fastify/sensible": "^6.0.1",
-    "@fastify/swagger": "^9.3.0",
+    "@fastify/swagger": "^9.4.0",
     "@scalar/fastify-api-reference": "^1.25.66",
     "close-with-grace": "^2.1.0",
     "fastify": "^5.1.0",
