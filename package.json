@@ -64,7 +64,7 @@
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@commitlint/cli": "^19.8.0",
-    "@commitlint/config-conventional": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.1",
     "@csmith/release-it-calver-plugin": "^2023.12.0",
     "@types/node": "^22.19.3",
     "cross-env": "^7.0.3",
