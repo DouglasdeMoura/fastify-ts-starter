@@ -53,7 +53,7 @@
     "@fastify/autoload": "^6.3.1",
     "@fastify/sensible": "^6.0.3",
     "@fastify/swagger": "^9.5.0",
-    "@scalar/fastify-api-reference": "^1.36.0",
+    "@scalar/fastify-api-reference": "^1.36.2",
     "close-with-grace": "^2.3.0",
     "fastify": "^5.6.0",
     "fastify-plugin": "^5.1.0",
