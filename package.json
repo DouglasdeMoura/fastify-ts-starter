@@ -51,7 +51,7 @@
   "license": "MIT",
   "dependencies": {
     "@fastify/autoload": "^6.3.1",
-    "@fastify/sensible": "^6.0.3",
+    "@fastify/sensible": "^6.0.4",
     "@fastify/swagger": "^9.6.0",
     "@scalar/fastify-api-reference": "^1.40.0",
     "close-with-grace": "^2.3.0",
