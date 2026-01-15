@@ -15,9 +15,9 @@ app.register(appService)
 
 app.setErrorHandler(async (err, request, reply) => {
   request.log.error({ err })
-  reply.code(err.statusCode || 500)
+  reply.code(500)
 
-  return { error: err.message }
+  return { error: err }
 })
 
 // delay is the number of milliseconds for the graceful close to finish
