@@ -90,6 +90,7 @@
     "fastify-type-provider-zod": {
       "zod": "$zod"
     },
-    "undici": "^6.23.0"
+    "undici": "^6.23.0",
+    "diff": "^8.0.3"
   }
 }
