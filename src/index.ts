@@ -1,3 +1,39 @@
+/**
+ * Application Entry Point
+ *
+ * This file bootstraps the Fastify server and handles:
+ * - Server initialization with logging
+ * - Plugin registration (via app.ts)
+ * - Graceful shutdown on SIGTERM/SIGINT
+ *
+ * Architecture overview:
+ * ┌─────────────────────────────────────────────────────────────┐
+ * │  index.ts (this file)                                       │
+ * │  - Creates Fastify instance                                 │
+ * │  - Registers app plugin                                     │
+ * │  - Sets up graceful shutdown                                │
+ * │  - Starts the server                                        │
+ * └─────────────────────────────────────────────────────────────┘
+ *            │
+ *            ▼
+ * ┌─────────────────────────────────────────────────────────────┐
+ * │  config/app.ts                                              │
+ * │  - Autoloads plugins from config/plugins/                   │
+ * │  - Autoloads routes from routes/                            │
+ * └─────────────────────────────────────────────────────────────┘
+ *            │
+ *      ┌─────┴─────┐
+ *      ▼           ▼
+ * ┌──────────┐ ┌──────────┐
+ * │ Plugins  │ │  Routes  │
+ * │ - CORS   │ │ - /      │
+ * │ - Helmet │ │ - /ping  │
+ * │ - Zod    │ │ - /users │
+ * │ - Error  │ │ - etc.   │
+ * │ - etc.   │ └──────────┘
+ * └──────────┘
+ */
+
 import closeWithGrace from 'close-with-grace'
 import Fastify from 'fastify'
 import appService from '#~/config/app.js'
@@ -6,13 +42,6 @@ import { env } from '#~/config/environment.js'
 const app = Fastify({ logger: true })
 
 app.register(appService)
-
-app.setErrorHandler(async (err, request, reply) => {
-  request.log.error({ err })
-  reply.code(500)
-
-  return { error: err }
-})
 
 // delay is the number of milliseconds for the graceful close to finish
 const closeListeners = closeWithGrace(

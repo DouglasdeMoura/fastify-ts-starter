@@ -1,7 +1,7 @@
 import swagger from '@fastify/swagger'
 import apiReference from '@scalar/fastify-api-reference'
-import { jsonSchemaTransform } from 'fastify-type-provider-zod'
 import fp from 'fastify-plugin'
+import { jsonSchemaTransform } from 'fastify-type-provider-zod'
 
 export default fp(async (fastify) => {
   fastify.register(swagger, {
