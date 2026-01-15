@@ -3,13 +3,7 @@ import Fastify from 'fastify'
 import appService from '~/config/app.js'
 import { env } from '~/config/environment.js'
 
-const app = Fastify({
-  // We want to use pino-pretty only if there is a human watching this,
-  // otherwise, we log as newline-delimited JSON.
-  logger: process.stdout.isTTY
-    ? { transport: { target: 'pino-pretty' } }
-    : true,
-})
+const app = Fastify({ logger: true })
 
 app.register(appService)
 

@@ -12,7 +12,7 @@
     "start": "wireit",
     "build": "wireit",
     "typecheck": "wireit",
-    "dev": "cross-env FASTIFY_AUTOLOAD_TYPESCRIPT=1 node --import=tsx --watch --env-file=.env ./src/index.ts",
+    "dev": "cross-env FASTIFY_AUTOLOAD_TYPESCRIPT=1 node --import=tsx --watch --env-file=.env ./src/index.ts | pino-pretty",
     "check": "biome check --write ./src",
     "check:unsafe": "biome check --write-unsafe ./src",
     "release": "release-it"
