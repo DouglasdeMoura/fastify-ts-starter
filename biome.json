@@ -1,8 +1,6 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
-  "organizeImports": {
-    "enabled": true
-  },
+  "$schema": "https://biomejs.dev/schemas/2.3.11/schema.json",
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "formatter": {
     "enabled": true,
     "indentStyle": "space",
@@ -28,9 +26,8 @@
       "recommended": true,
       "complexity": {
         "noExtraBooleanCast": "error",
-        "noMultipleSpacesInRegularExpressionLiterals": "error",
         "noUselessCatch": "error",
-        "noWith": "error"
+        "noAdjacentSpacesInRegex": "error"
       },
       "correctness": {
         "noConstAssign": "error",
@@ -40,7 +37,6 @@
         "noGlobalObjectCalls": "error",
         "noInnerDeclarations": "error",
         "noInvalidConstructorSuper": "error",
-        "noNewSymbol": "error",
         "noNonoctalDecimalEscape": "error",
         "noPrecisionLoss": "error",
         "noSelfAssign": "error",
@@ -55,7 +51,9 @@
         "noUnusedVariables": "error",
         "useIsNan": "error",
         "useValidForDirection": "error",
-        "useYield": "error"
+        "useYield": "error",
+        "noInvalidBuiltinInstantiation": "error",
+        "useValidTypeof": "error"
       },
       "suspicious": {
         "noAssignInExpressions": "error",
@@ -80,10 +78,10 @@
         "noShadowRestrictedNames": "error",
         "noUnsafeNegation": "error",
         "useGetterReturn": "error",
-        "useValidTypeof": "error"
+        "noWith": "error"
       }
     },
-    "ignore": ["**/.server", "**/.client"]
+    "includes": ["**", "!**/.server", "!**/.client"]
   },
   "javascript": {
     "globals": ["React"],
@@ -101,10 +99,10 @@
   },
   "overrides": [
     {
-      "include": ["**/*.{js,jsx,ts,tsx}"]
+      "includes": ["**/*.{js,jsx,ts,tsx}"]
     },
     {
-      "include": ["**/*.{ts,tsx}"]
+      "includes": ["**/*.{ts,tsx}"]
     }
   ]
 }
