@@ -5,7 +5,7 @@ This is a Fastify starter project for your new projects. Out-of-the-box, it incl
 - TypeScript (with [tsx](https://www.npmjs.com/package/tsx) for development);
 - OpenAPI support with [Scalar](https://github.com/scalar/scalar/blob/main/packages/fastify-api-reference/README.md) theme;
 - File based routing and auto-loading plugins provided by [fastify-autoload](https://github.com/fastify/fastify-autoload);
-- GitHub Actions for auto-merging Dependabot PRs, running tests, building the project and validate the Dockerfile;
+- GitHub Actions for auto-merging Dependabot PRs, running tests, building the project and validating the Dockerfile;
 - VS Code settings for debugging and formatting;
 - [Vitest](https://vitest.dev/) for testing;
 - [Biome](https://biomejs.dev) for code formatting and linting;
