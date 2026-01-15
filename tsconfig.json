@@ -11,7 +11,7 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["src/*"]
+      "#~/*": ["src/*"]
     },
     "strict": true,
     "noUncheckedIndexedAccess": true,
