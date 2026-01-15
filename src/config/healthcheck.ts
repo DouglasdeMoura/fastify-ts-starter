@@ -8,7 +8,7 @@ const request = http.request(
     host: 'localhost',
     port: process.env.PORT || 3000,
     timeout: 2000,
-    pathname: '/ping',
+    path: '/ping',
   },
   (res) => {
     logger.info(`Healthcheck status code: ${res.statusCode}`)
