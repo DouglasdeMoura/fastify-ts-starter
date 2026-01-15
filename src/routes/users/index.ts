@@ -27,13 +27,13 @@ import { ErrorResponseSchema } from '#~/schemas/error.js'
  * Zod schemas serve as both runtime validation AND TypeScript types.
  */
 const UserSchema = z.object({
-  id: z.string().uuid().describe('Unique user identifier'),
+  id: z.uuid().describe('Unique user identifier'),
   name: z.string().min(1).max(100).describe('User display name'),
-  email: z.string().email().describe('User email address'),
+  email: z.email().describe('User email address'),
   role: z
     .enum(['admin', 'user', 'guest'])
     .describe('User role for authorization'),
-  createdAt: z.string().datetime().describe('ISO 8601 creation timestamp'),
+  createdAt: z.iso.datetime().describe('ISO 8601 creation timestamp'),
 })
 
 /**
