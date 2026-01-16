@@ -4,7 +4,7 @@
   "imports": {
     "#~/*": {
       "development": "./src/*",
-      "default": "./dist/*"
+      "default": "./*"
     }
   },
   "description": "This project was bootstrapped with Fastify-CLI.",
@@ -39,7 +39,7 @@
       ]
     },
     "build": {
-      "command": "tsc --build --pretty && node -e \"require('fs').writeFileSync('dist/package.json', JSON.stringify({ type: 'module', imports: { '#~/*': './*' } }, null, 2))\"",
+      "command": "tsc --build --pretty",
       "clean": "if-file-deleted",
       "files": [
         "src/**/*.ts",
