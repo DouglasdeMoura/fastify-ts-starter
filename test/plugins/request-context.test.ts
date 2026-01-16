@@ -1,5 +1,5 @@
 import Fastify from 'fastify'
-import { describe, expect, it, test } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import RequestContext from '../../src/config/plugins/request-context.js'
 
 describe('Request Context Plugin', () => {

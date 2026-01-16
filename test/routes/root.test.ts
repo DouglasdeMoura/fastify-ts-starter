@@ -1,4 +1,4 @@
-import { test, expect } from 'vitest'
+import { expect, test } from 'vitest'
 import { app } from '../helper.js'
 
 test('default root route', async () => {
