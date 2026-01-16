@@ -293,6 +293,35 @@ The Dockerfile uses:
 - **Distroless base** for security
 - **Health checks** via `/ping` endpoint
 
+### Health Checks
+
+The container includes a built-in health check that Docker uses to monitor application status:
+
+```
+Docker → runs every 15s → node config/healthcheck.js → GET /ping → 200 = healthy
+```
+
+**How it works:**
+- `src/config/healthcheck.ts` makes an HTTP request to the `/ping` endpoint
+- Returns exit code 0 (healthy) if the response is 200, otherwise 1 (unhealthy)
+- Docker marks the container as `healthy`, `unhealthy`, or `starting`
+
+**Useful for:**
+- **Docker Compose** - `depends_on` with `condition: service_healthy`
+- **Restart policies** - Docker can auto-restart unhealthy containers
+- **Monitoring** - `docker ps` shows health status
+
+**Kubernetes users:** K8s ignores Docker HEALTHCHECK. Add your own probes:
+
+```yaml
+livenessProbe:
+  httpGet:
+    path: /ping
+    port: 3000
+  initialDelaySeconds: 30
+  periodSeconds: 15
+```
+
 ## Git Hooks
 
 [Lefthook](https://github.com/evilmartians/lefthook) runs on commit:
