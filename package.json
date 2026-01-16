@@ -21,8 +21,8 @@
     "build": "wireit",
     "typecheck": "wireit",
     "dev": "cross-env FASTIFY_AUTOLOAD_TYPESCRIPT=1 node --conditions=development --import=tsx --watch --env-file=.env ./src/index.ts | pino-pretty",
-    "check": "biome check --write ./src",
-    "check:unsafe": "biome check --write-unsafe ./src",
+    "check": "biome check --write ./src ./test",
+    "check:unsafe": "biome check --write --unsafe ./src ./test",
     "release": "release-it"
   },
   "wireit": {
