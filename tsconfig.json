@@ -2,7 +2,7 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "target": "es2022",
+    "target": "ES2023",
     "allowJs": true,
     "resolveJsonModule": true,
     "moduleDetection": "force",
@@ -18,8 +18,9 @@
     "noImplicitOverride": true,
     "module": "NodeNext",
     "outDir": "dist",
-    "sourceMap": true,
-    "lib": ["es2022"]
+    "sourceMap": false,
+    "removeComments": true,
+    "lib": ["ES2023"]
   },
   "include": ["src/**/*.ts"]
 }
