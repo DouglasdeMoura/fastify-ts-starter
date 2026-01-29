@@ -85,7 +85,7 @@
     "release-it": "^19.2.3",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
-    "vitest": "^4.0.17",
+    "vitest": "^4.0.18",
     "wireit": "^0.14.12"
   },
   "overrides": {
