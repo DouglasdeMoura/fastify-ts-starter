@@ -76,7 +76,7 @@
     "@commitlint/cli": "^20.3.1",
     "@commitlint/config-conventional": "^20.4.0",
     "@csmith/release-it-calver-plugin": "^2023.12.0",
-    "@types/node": "^25.0.9",
+    "@types/node": "^25.2.0",
     "@vitest/coverage-v8": "^4.0.17",
     "cross-env": "^10.1.0",
     "fastify-tsconfig": "^3.0.0",
