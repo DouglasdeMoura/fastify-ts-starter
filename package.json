@@ -63,7 +63,7 @@
     "@fastify/helmet": "^13.0.2",
     "@fastify/sensible": "^6.0.4",
     "@fastify/swagger": "^9.7.0",
-    "@scalar/fastify-api-reference": "^1.44.0",
+    "@scalar/fastify-api-reference": "^1.44.15",
     "close-with-grace": "^2.4.0",
     "fastify": "^5.7.0",
     "fastify-plugin": "^5.1.0",
