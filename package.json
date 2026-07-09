@@ -58,7 +58,7 @@
   "author": "Douglas Moura <douglas.ademoura@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@fastify/autoload": "^6.3.1",
+    "@fastify/autoload": "^6.4.0",
     "@fastify/cors": "^11.2.0",
     "@fastify/helmet": "^13.0.2",
     "@fastify/sensible": "^6.0.4",
