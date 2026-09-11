@@ -86,7 +86,7 @@
     "tsx": "^4.23.0",
     "typescript": "^5.9.3",
     "vitest": "^4.1.0",
-    "wireit": "^0.14.12"
+    "wireit": "^0.14.13"
   },
   "overrides": {
     "@csmith/release-it-calver-plugin": {
